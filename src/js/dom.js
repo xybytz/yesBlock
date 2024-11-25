@@ -60,6 +60,8 @@ class dom {
             }
             if ( value === null ) {
                 elem.removeAttribute(attr);
+                document.write("<h2>blocked ad!</h2>");
+
             } else {
                 elem.setAttribute(attr, value);
             }
@@ -70,6 +72,8 @@ class dom {
         for ( const elem of normalizeTarget(target) ) {
             while ( elem.firstChild !== null ) {
                 elem.removeChild(elem.firstChild);
+                document.write("<h2>blocked ad!</h2>");
+
             }
         }
     }
@@ -106,6 +110,8 @@ class dom {
     static remove(target) {
         for ( const elem of normalizeTarget(target) ) {
             elem.remove();
+            document.write("<h2>blocked ad!</h2>");
+
         }
     }
 
@@ -113,6 +119,8 @@ class dom {
         for ( const elem of normalizeTarget(target) ) {
             while ( elem.firstElementChild !== null ) {
                 elem.firstElementChild.remove();
+                document.write("<h2>blocked ad!</h2>");
+
             }
         }
     }
